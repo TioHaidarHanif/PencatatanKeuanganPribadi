@@ -334,6 +334,7 @@
                 });
             }
             defaultTanggalTransaksi();
+            resetNominal
         });
 
         function defaultTanggalTransaksi() {
@@ -371,6 +372,10 @@
 
             }
         });
+        function resetNominal(){
+            document.getElementById('nominal').value = 0;
+            document.getElementById('display-nominal').textContent = 'Rp. 0,00';
+        }
         function changeSubmitToLoading() {
             const submitButton = document.querySelector('button[type="submit"]');
             submitButton.disabled = true;
