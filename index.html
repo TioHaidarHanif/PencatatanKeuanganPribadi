@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pencatatan Keuangan Pribadi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        .whitespace-pre-line {
+            white-space: pre-line;
+        }
+
+        
+
+        .bg-paper {
+            /* bacmround with image, and repeat */
+
+            transition: width 1s ease 0.5s;
+            /* 0.5s delay before transition starts */
+
+        }
+
+        .bg-paper:hover {
+            
+            box-shadow: 5px 5px 5px 5px rgba(78, 173, 79, 0.25);
+        }
+
+        .dark-mode-tambahan {
+            background-blend-mode: soft-light;
+            
+
+        }
+    </style>
+</head>
+
+<body class="">
+
+
+    <div class="container px-xl-5 ">
+        <div class="mx-xl-5">
+
+            <div class="card mb-3   " style="background: none;">
+
+                <button style="border: 0cap; background: none;" onclick="changeTheme()"> <img
+                        class="card-img-top rounded" src="./LOGO + SPESIAL HARI KEMERDEKAAN.png"
+                        style="height: 200px; object-fit: scale-down;" alt=""> </button>
+
+            </div>
+
+
+            <form id="formulir" class="mb-3  needs-validation" novalidate>
+
+                <div class="card mb-3  bg-paper  ">
+                    <div class="d-flex justify-content-around align-items-center">
+                        <img class="card-img-top d-block " alt="">
+
+                        <!-- <img class="card-img-top d-block " src="LOGO WARNA.png"  style="width: 50px; height: auto;" alt="">
+                <img class="card-img-top d-block " src="Rinai Hamaika.png"  style="width: 40px; height: auto;" alt=""> -->
+                    </div>
+                    <!--  -->
+                    <div class="card-header">
+                        <h1 class="text-center"> <b> 📝Pencatatan Keuangan Pribadi📝</b></h1>
+
+                    </div>
+                    <div class="card-body m-sm-3">
+                        Why?
+                        <p class="whitespace-pre-line ">
+                            Wahai orang-orang yang beriman, apabila kamu berutang piutang untuk waktu yang ditentukan,
+                            hendaklah kamu mencatatnya. Hendaklah seorang pencatat di antara kamu menuliskannya dengan
+                            benar. Janganlah pencatat menolak untuk menuliskannya sebagaimana Allah telah mengajar-kan
+                            kepadanya. Hendaklah dia mencatat(-nya) dan orang yang berutang itu mendiktekan(-nya).
+                            Hendaklah dia bertakwa kepada Allah, Tuhannya, dan janganlah dia menguranginya sedikit pun.
+                            Jika yang berutang itu orang yang kurang akalnya, lemah (keadaannya), atau tidak mampu
+                            mendiktekan sendiri, hendaklah walinya mendiktekannya dengan benar. Mintalah kesaksian dua
+                            orang saksi laki-laki di antara kamu. Jika tidak ada (saksi) dua orang laki-laki, (boleh)
+                            seorang laki-laki dan dua orang perempuan di antara orang-orang yang kamu sukai dari para
+                            saksi (yang ada) sehingga jika salah seorang (saksi perempuan) lupa, yang lain
+                            mengingatkannya. Janganlah saksi-saksi itu menolak apabila dipanggil. Janganlah kamu bosan
+                            mencatatnya sampai batas waktunya, baik (utang itu) kecil maupun besar. Yang demikian itu
+                            lebih adil di sisi Allah, lebih dapat menguatkan kesaksian, dan lebih mendekatkan kamu pada
+                            ketidakraguan, kecuali jika hal itu merupakan perniagaan tunai yang kamu jalankan di antara
+                            kamu. Maka, tidak ada dosa bagi kamu jika kamu tidak mencatatnya. Ambillah saksi apabila
+                            kamu berjual beli dan janganlah pencatat mempersulit (atau dipersulit), begitu juga saksi.
+                            Jika kamu melakukan (yang demikian), sesungguhnya hal itu suatu kefasikan padamu.
+                            Bertakwalah kepada Allah, Allah memberikan pengajaran kepadamu dan Allah Maha Mengetahui
+                            segala sesuatu. (QS. Al-Baqarah: 282)
+
+                            https://litequran.net/al-baqarah
+                        </p>
+
+
+
+
+                    </div>
+                    <div class="card-footer text-body-secondary">
+                        <p class="text-danger">
+
+                            * Jangan masukan data sensitif seperti password ke dalam formulir ini
+                        </p>
+                    </div>
+                </div> <!-- card -->
+
+                <!--Boostrapt Card -->
+
+                <!-- Tanggal Transaksi -->
+                <div class="card mb-3 p-sm-3 bg-paper">
+                    <div class="card-body">
+                        <label class="form-label
+                        mb-3" for="tanggal_transaksi">
+                            <h5 class="fw-semibold">Tanggal Transaksi</h5>
+                        </label>
+                        <input type="date" name="tanggal_transaksi" id="tanggal_transaksi" required
+                            placeholder="Masukan Jawaban Kamu" class="form-control"
+                            aria-describedby="Masukan data dengan benar">
+                    </div>
+                </div>
+                <!-- Keterangan -->
+                <div class="card mb-3 p-sm-3 bg-paper">
+                    <div class="card-body">
+                        <label class="form-label
+                        mb-3" for="keterangan">
+                            <h5 class="fw-semibold">Keterangan</h5>
+                        </label>
+                        <p class="whitespace
+                        pre-line">
+                        </p>
+                        <textarea name="keterangan" id="keterangan" required placeholder="Masukan Jawaban Kamu"
+                            class="form-control " style="height: 200px;"
+                            aria-describedby="Masukan data dengan benar"></textarea>
+                    </div>
+                </div>
+                <!-- Jenis Keperluan (dropdown: Pribadi, Organisasi, Sedekah, Lainnya) -->
+                <div class="card mb-3 p-sm-3 bg-paper">
+                    <div class="card-body">
+                        <label class="form-label
+                        mb-3" for="jenis_keperluan">
+                            <h5 class="fw-semibold">Jenis Keperluan</h5>
+                        </label>
+                        <br>
+                        <div class="btn-group " role="group">
+                            <select class="form-select" id="jenis_keperluan" name="jenis_keperluan" required>
+                                <option value="">Silahkan Isi...</option>
+                                <option value="Pribadi">Pribadi</option>
+                                <option value="Organisasi">Organisasi</option>
+                                <option value="Sedekah">Sedekah</option>
+                                <option value="Lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tipe pembayaran (dropdown: Tunai, LinkAja, BSI, Dana) -->
+                <div class="card mb-3 p-sm-3 bg-paper">
+                    <div class="card-body">
+                        <label class="form-label
+                        mb-3" for="tipe_pembayaran">
+                            <h5 class="fw-semibold">Tipe Pembayaran</h5>
+                        </label>
+                        <br>
+                        <div class="btn-group " role="group">
+                            <select class="form-select" id="tipe_pembayaran" name="tipe_pembayaran" required>
+                                <option value="">Silahkan Isi...</option>
+                                <option value="Tunai">Tunai</option>
+                                <option value="LinkAja">LinkAja</option>
+                                <option value="BSI">BSI</option>
+                                <option value="Dana">Dana</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pemasukan/Pengeluaran (radiobutton: Pemasukan, Pengeluarab) -->
+                <div class="card mb-3 p-sm-3 bg-paper">
+                    <div class="card-body">
+                        <label class="form-label
+                        mb-3" for="jenis_transaksi">
+                            <h5 class="fw-semibold">Jenis Transaksi</h5>
+                        </label>
+                        <div class="form-check
+                        ">
+                            <input class="form-check
+                        -input" type="radio" id="jenis_transaksi-pemasukan" name="jenis_transaksi" value="Pemasukan"
+                                required>
+
+
+                            <label class="form-check
+                        -label" for="jenis_transaksi-pemasukan">Pemasukan</label>
+                        </div>
+                        <div class="form-check
+                        ">
+                            <input class="form-check
+                        -input" type="radio" id="jenis_transaksi-pengeluaran" name="jenis_transaksi"
+                                value="Pengeluaran" required>
+                            <label class="form-check
+                                -label" for="jenis_transaksi-pengeluaran">Pengeluaran</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- nominal (number of concurency Rupiah Indonwsia. User just input number, but the input show like rupian concurency: Rp xx.xxx.xxx,00) -->
+                <div class="card mb-3 p-sm-3 bg-paper">
+                    <div class="card-body">
+                        <label class="form-label
+                        mb-3" for="nominal">
+                            <h5 class="fw-semibold">Nominal</h5>
+                        </label>
+                        <input type="number" name="nominal" id="nominal" required placeholder="Masukan Jawaban Kamu"
+                            class="form-control" aria-describedby="Masukan data dengan benar">
+
+                        <div class="card-footer text-muted" id="display-nominal">
+                            Rp. 0,00
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- catatan -->
+                <div class="card mb-3 p-sm-3 bg-paper">
+                    <div class="card-body">
+                        <label class="form-label
+                        mb-3" for="catatan">
+                            <h5 class="fw-semibold">Catatan</h5>
+                        </label>
+                        <p class="whitespace
+                        pre-line">
+                        </p>
+                        <textarea name="catatan" id="catatan" required placeholder="Masukan Jawaban Kamu"
+                            class="form-control " style="height: 200px;"
+                            aria-describedby="Masukan data dengan benar"></textarea>
+                    </div>
+                </div>
+                <!-- lokasi -->
+                <input type="hidden" id="latitude" name="latitude">
+                <input type="hidden" id="longitude" name="longitude">
+                <div class="card mb-3 p-sm-3 bg-paper">
+                    <!-- Submit Button -->
+                    <div class="card-body  ">
+
+                        <button type="submit" class="btn btn-outline-primary mb-sm-3">Submit</button>
+
+                        <p id="pesan" class="text-muted ">Ucapkan Basmallah sebelum melakukan submit</p>
+                    </div>
+                </div>
+
+            </form>
+
+
+            <footer class="card mb-3 bg-paper">
+                <div class="card-footer   text-muted">
+                    <div class="row justify-content-evenly mt-4">
+                        <div class="col-md-5 text-center">
+                            <p> <span id="current-time"></span></p>
+                        </div>
+                    </div>
+                    <div class="text-center ">
+                        <p><strong>Lokasi:</strong> <span id="current-location"></span></p>
+                    </div>
+                    <p class="text-center"> 📝Pencatatan Keuangan Pribadi📝</p>
+                    <h5 class="text-muted text-center  "> <a href="https://www.instagram.com/tiohaidarhanif/">@tiohaidarhanif</a></h5>
+
+
+                    
+                </div>
+
+
+            </footer>
+            <!-- create a success card -->
+        </div>
+
+    </div> <!-- container -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+
+        const formulir = document.getElementById('formulir');
+        setInterval(updateCurrentTime, 1000);
+
+
+        function updateCurrentTime() {
+
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+            const currentTime = new Date().toLocaleString('id-ID', options);
+
+
+            document.getElementById('current-time').textContent = currentTime;
+        }
+
+
+        function updateLocation() {
+
+            if (navigator.geolocation) {
+                console.log("coba" + navigator.geolocation);
+                navigator.geolocation.getCurrentPosition((position) => {
+                    const { latitude, longitude } = position.coords;
+                    document.getElementById('current-location').textContent = `${latitude.toFixed(6)}, ${longitude.toFixed(6)}`;
+                    document.getElementById('latitude').value = latitude;
+                    document.getElementById('longitude').value = longitude;
+                }, (error) => {
+                    console.info('Error:', error);
+                    document.getElementById('current-location').textContent = 'Not available'
+                });
+            } else {
+                document.getElementById('current-location').textContent = 'Not supported';
+            }
+        }
+        // Load cached data
+        window.addEventListener('load', () => {
+            if (document.documentElement.getAttribute('data-bs-theme') == 'dark' || localStorage.getItem('dark-mode') == 'true' || localStorage.getItem('theme') == 'dark') {
+                document.querySelectorAll('.bg-paper').forEach((element) => {
+                    element.classList.add('dark-mode-tambahan');
+                });
+            }
+            updateLocation();
+
+            const cachedData = localStorage.getItem('formData');
+            console.log(cachedData);
+            if (cachedData) {
+                const data = JSON.parse(cachedData);
+                Object.entries(data).forEach(([key, value]) => {
+                    const element = formulir.elements[key];
+                    if (element) {
+                        if (element.type === 'checkbox') {
+                            element.checked = value.includes(element.value);
+                        } else if (element.type === 'radio') {
+                            element.checked = (element.value === value);
+                        } else if (element.type !== 'file') {
+                            element.value = value;
+                        }
+                    }
+                });
+            }
+            defaultTanggalTransaksi();
+        });
+
+        function defaultTanggalTransaksi() {
+            let today = new Date();
+            const dd = String(today.getDate()).padStart(2, '0');
+            const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            const yyyy = today.getFullYear();
+
+            today = yyyy + '-' + mm + '-' + dd;
+            document.getElementById('tanggal_transaksi').value = today;
+        }
+
+        formulir.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            if (formulir.checkValidity()) {
+                changeSubmitToLoading();
+                bePatient();
+                const formData = new FormData(formulir);
+                const data = Object.fromEntries(formData);
+                localStorage.setItem('formData', JSON.stringify(data));
+                data.interests = formData.getAll('interests');
+                const { row } = await sendToSpreadsheet(data);
+                if (row) {
+                    showSuccessSendForm(row);
+
+                } else {
+                    alert('Gagal mengirimkan formulir');
+                    location.reload(true);
+
+
+                }
+            } else {
+
+                formulir.classList.add('was-validated');
+
+            }
+        });
+        function changeSubmitToLoading() {
+            const submitButton = document.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.classList.add('disabled');
+            submitButton.className = 'btn mb-sm-3 btn-primary loading-button';
+            submitButton.innerHTML =
+                `
+  <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+  <span role="status">Tunggu Yaa...</span>
+        `;
+
+        }
+        function bePatient() {
+            document.getElementById('pesan').textContent = '“Dan bersabarlah! Sesungguhnya Allah beserta orang-orang yang sabar.” (QS. Al-Anfal:46)';
+        }
+
+        function showSuccessSendForm(lastrow) {
+
+            formulir.innerHTML =
+                `
+        <div class="card mb-3 p-sm-3 bg-paper">
+                            <div class="card-body">
+
+            <div class="text-center">
+                <h1 class="display-4 text-success">Alhamdulillah</h1>
+                <p class="lead">Data Anda berhasil tersimpan pada baris ke - ${lastrow}</p>
+                <div class="mt-4">
+ <a class="btn btn-danger" onclick="tutupWindow()">Tutup</a>
+                    <a class="btn btn-primary" href="https://docs.google.com/spreadsheets/d/1l_8Dioq2Toyt-WX_WaX7y8Hftoei0LivXi44Oz7Dsa8/edit?gid=0#gid=0" target="_blank">Lihat Data</a>
+
+                </div>
+            </div>
+            </div>
+        </div>
+        `
+        }
+        function tutupWindow() {
+            try {
+
+                return window.close();
+            } catch (e) {
+                alert("Maaf, ada  kesalahan saat menutup window\n" + e.message);
+            }
+        }
+        // // nominal on input
+        document.getElementById('nominal').addEventListener('input', (event) => {
+            const nominal = event.target.value;
+            document.getElementById('display-nominal').textContent = formatRupiah(nominal);
+
+        });
+        // format rupiah function (Rp. xxx.xxx.xxx)
+        function formatRupiah(nominal) {
+            const formatter = new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 2
+            });
+            return formatter.format(nominal);
+        }
+
+
+
+
+
+        async function sendToSpreadsheet(data) {
+            try {
+                const response = await fetch('https://script.google.com/macros/s/AKfycbyaQBwP0FCLjVtOhC8bhMzAsJ_pBEIr6_CK7GkOA4looYCxcxZ0EUQIWzEf7cwtzm1h7A/exec?query=pencatatan', {
+
+                    method: 'POST',
+                    redirect: 'follow',
+
+                    headers: {
+                        'Content-Type': 'text/plain'
+
+                    },
+
+                    body: JSON.stringify(data),
+                });
+                console.log("aaw")
+                if (response.ok) {
+                    const result = await response.json();
+                    localStorage.setItem('formData', JSON.stringify(data));
+                    return result;
+
+
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            } finally {
+            }
+        }
+
+        function changeTheme() {
+            const theme = document.documentElement.getAttribute('data-bs-theme');
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-bs-theme', 'light');
+
+            } else {
+                document.querySelectorAll('.bg-paper').forEach((element) => {
+                    element.classList.add('dark-mode-tambahan');
+                });
+                document.documentElement.setAttribute('data-bs-theme', 'dark');
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
