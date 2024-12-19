@@ -81,6 +81,29 @@
       .premium-container:hover .premium-dropdown {
         display: block;
       }
+
+      .contact-dropdown {
+        margin-top: 15px;
+        text-align: left;
+      }
+
+      .contact-dropdown a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+        border-top: 1px solid #ddd;
+      }
+
+      .contact-dropdown a:hover {
+        background-color: #4caf50;
+        color: #ffffff;
+      }
+
+      .contact-dropdown a i {
+        margin-right: 10px;
+      }
     </style>
   </head>
   <body>
@@ -125,12 +148,12 @@
         style="position: relative; display: inline-block"
       >
         <a
-          href="https://wa.me/6281905211340?text=Halo%20Admin%20MoneyCare,%20saya%20ingin%20menanyakan%20tentang%20upgrade%20ke%20versi%20premium."
+          href="#"
           class="w3-button w3-white w3-border w3-padding-large w3-large w3-margin-top upgrade-btn"
           style="color: #4caf50; border-color: #4caf50"
-          target="_blank"
-          >Upgrade? Hubungi Kami!</a
         >
+          Upgrade? Hubungi Kami!
+        </a>
         <ul class="premium-dropdown">
           <li><i class="fas fa-unlock"></i>Akses data keuangan tanpa batas</li>
           <li>
@@ -142,6 +165,20 @@
           </li>
           <li><i class="fas fa-bell"></i>Pengingat otomatis</li>
           <li><i class="fas fa-ad"></i>Tanpa gangguan iklan</li>
+          <div class="contact-dropdown">
+            <a
+              href="https://wa.me/6281905211340?text=Halo%20Admin%20MoneyCare,%20saya%20ingin%20menanyakan%20tentang%20upgrade%20ke%20versi%20premium."
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp"></i>Hubungi via WhatsApp
+            </a>
+            <a
+              href="https://t.me/NotifikasiKeuangan_bot?start=Halo_Admin_MoneyCare_saya_ingin_menanyakan_tentang_upgrade_ke_versi_premium"
+              target="_blank"
+            >
+              <i class="fab fa-telegram-plane"></i>Hubungi via Telegram
+            </a>
+          </div>
         </ul>
       </div>
     </header>
