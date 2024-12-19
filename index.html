@@ -37,15 +37,46 @@
         font-size: 200px;
       }
 
-      /* Hover effect for the premium button */
-      .premium-container:hover .premium-features {
+      /* Container positioning */
+      .premium-container {
+        position: relative;
+      }
+
+      /* Dropdown list styling */
+      .premium-dropdown {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: calc(100% + 5px); /* Position slightly below the button */
+        background-color: #ffffff;
+        border: 1px solid #4caf50;
+        border-radius: 5px;
+        padding: 10px 0;
+        margin: 0;
+        list-style: none;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        z-index: 10;
+        text-align: left;
+      }
+
+      /* Dropdown list item styling */
+      .premium-dropdown li {
+        padding: 10px 20px;
+        font-size: 14px;
+        color: #333;
+        cursor: pointer;
+      }
+
+      /* Add hover effect to dropdown items */
+      .premium-dropdown li:hover {
+        background-color: #4caf50;
+        color: #ffffff;
+      }
+
+      /* Show dropdown on hover */
+      .premium-container:hover .premium-dropdown {
         display: block;
-      }
-      .premium-features li {
-        padding: 5px 0;
-      }
-      .premium-features li:not(:last-child) {
-        border-bottom: 1px solid #ddd;
       }
     </style>
   </head>
@@ -97,23 +128,7 @@
           target="_blank"
           >Upgrade? Hubungi Kami!</a
         >
-        <ul
-          class="premium-features"
-          style="
-            display: none;
-            position: absolute;
-            left: 0;
-            top: 100%;
-            background: white;
-            border: 1px solid #4caf50;
-            padding: 10px;
-            margin: 0;
-            list-style: none;
-            width: 300px;
-            text-align: left;
-            z-index: 10;
-          "
-        >
+        <ul class="premium-dropdown" style="display: none">
           <li>Akses data keuangan tanpa batas</li>
           <li>Statistik dan grafik keuangan lengkap</li>
           <li>Integrasi dengan Google Sheets</li>
