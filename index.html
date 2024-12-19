@@ -36,6 +36,17 @@
       .fa-coffee {
         font-size: 200px;
       }
+
+      /* Hover effect for the premium button */
+      .premium-container:hover .premium-features {
+        display: block;
+      }
+      .premium-features li {
+        padding: 5px 0;
+      }
+      .premium-features li:not(:last-child) {
+        border-bottom: 1px solid #ddd;
+      }
     </style>
   </head>
   <body>
@@ -75,25 +86,41 @@
         class="w3-button w3-black w3-padding-large w3-large w3-margin-top"
         >Mulai sekarang</a
       >
-      <p class="w3-margin-top w3-large">Keunggulan versi premium:</p>
-      <ul
-        class="w3-ul w3-center w3-large"
-        style="max-width: 500px; margin: auto"
+      <div
+        class="premium-container"
+        style="position: relative; display: inline-block"
       >
-        <li>Akses data keuangan tanpa batas</li>
-        <li>Statistik dan grafik keuangan lengkap</li>
-        <li>Integrasi dengan Google Sheets</li>
-        <li>Pengingat otomatis</li>
-        <li>Tanpa gangguan iklan</li>
-      </ul>
-      <p class="w3-margin-top">Mau upgrade dan nikmati semua fitur ini?</p>
-      <a
-        href="https://wa.me/6281905211340?text=Halo%20Admin%20MoneyCare,%20saya%20ingin%20menanyakan%20tentang%20upgrade%20ke%20versi%20premium."
-        class="w3-button w3-white w3-border w3-padding-large w3-large w3-margin-top"
-        style="color: #4caf50; border-color: #4caf50"
-        target="_blank"
-        >Hubungi Kami</a
-      >
+        <a
+          href="https://wa.me/6281905211340?text=Halo%20Admin%20MoneyCare,%20saya%20ingin%20menanyakan%20tentang%20upgrade%20ke%20versi%20premium."
+          class="w3-button w3-white w3-border w3-padding-large w3-large w3-margin-top upgrade-btn"
+          style="color: #4caf50; border-color: #4caf50"
+          target="_blank"
+          >Upgrade? Hubungi Kami!</a
+        >
+        <ul
+          class="premium-features"
+          style="
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background: white;
+            border: 1px solid #4caf50;
+            padding: 10px;
+            margin: 0;
+            list-style: none;
+            width: 300px;
+            text-align: left;
+            z-index: 10;
+          "
+        >
+          <li>Akses data keuangan tanpa batas</li>
+          <li>Statistik dan grafik keuangan lengkap</li>
+          <li>Integrasi dengan Google Sheets</li>
+          <li>Pengingat otomatis</li>
+          <li>Tanpa gangguan iklan</li>
+        </ul>
+      </div>
     </header>
 
     <!-- First Grid -->
