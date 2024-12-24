@@ -39,149 +39,131 @@
   </head>
 
   <body class="">
-    <div class="container px-xl-5">
-      <div class="mx-xl-5">
-        <div class="card mb-3" style="background: none">
-          <button
-            style="border: 0cap; background: none"
-            onclick="changeTheme()"
-          >
-            <img
-              class="card-img-top rounded"
-              src="./LOGO + SPESIAL HARI KEMERDEKAAN.png"
-              style="height: 200px; object-fit: scale-down"
-              alt=""
-            />
-          </button>
-        </div>
+    <div class="container" id="container">
+      <div class="form-container identitas-container">
+        <form id="formulir" class="needs-validation" novalidate>
+          <h1 style="text-align: center">Submit Data</h1>
+          <div class="center-form">
+            <div class="center-form-left">
+              <!-- Link Google Spreadsheet -->
+              <input
+                type="url"
+                name="link"
+                id="link"
+                required
+                placeholder="Link Google Spreadsheet"
+                aria-describedby="Masukan data dengan benar"
+              />
 
-        <div class="form-container identitas-container">
-          <form id="formulir" class="needs-validation" novalidate>
-            <h1 style="text-align: center">Submit Data</h1>
-            <div class="center-form">
-              <div class="center-form-left">
-                <!-- Link Google Spreadsheet -->
-                <input
-                  type="url"
-                  name="link"
-                  id="link"
-                  required
-                  placeholder="Link Google Spreadsheet"
-                  aria-describedby="Masukan data dengan benar"
-                />
+              <!-- Tanggal Transaksi -->
+              <input
+                type="date"
+                name="tanggal_transaksi"
+                id="tanggal_transaksi"
+                required
+                placeholder="Tanggal Transaksi"
+                aria-describedby="Masukan data dengan benar"
+              />
 
-                <!-- Tanggal Transaksi -->
-                <input
-                  type="date"
-                  name="tanggal_transaksi"
-                  id="tanggal_transaksi"
-                  required
-                  placeholder="Tanggal Transaksi"
-                  aria-describedby="Masukan data dengan benar"
-                />
+              <!-- Keterangan -->
+              <textarea
+                name="keterangan"
+                id="keterangan"
+                required
+                placeholder="Keterangan"
+                style="height: 200px"
+                aria-describedby="Masukan data dengan benar"
+              ></textarea>
 
-                <!-- Keterangan -->
-                <textarea
-                  name="keterangan"
-                  id="keterangan"
-                  required
-                  placeholder="Keterangan"
-                  style="height: 200px"
-                  aria-describedby="Masukan data dengan benar"
-                ></textarea>
-
-                <!-- Nominal -->
-                <input
-                  type="number"
-                  name="nominal"
-                  id="nominal"
-                  required
-                  placeholder="Nominal (Rp)"
-                  aria-describedby="Masukan data dengan benar"
-                />
-                <div id="display-nominal">Rp. 0,00</div>
-              </div>
-
-              <div class="center-form-right">
-                <!-- Jenis Keperluan -->
-                <select
-                  class="form-select"
-                  id="jenis_keperluan"
-                  name="jenis_keperluan"
-                  required
-                >
-                  <option value="" disabled selected>Jenis Keperluan</option>
-                  <option value="Pribadi">Pribadi</option>
-                  <option value="Organisasi">Organisasi</option>
-                  <option value="Sedekah">Sedekah</option>
-                  <option value="Lainnya">Lainnya</option>
-                </select>
-
-                <!-- Tipe Pembayaran -->
-                <select
-                  class="form-select"
-                  id="tipe_pembayaran"
-                  name="tipe_pembayaran"
-                  required
-                >
-                  <option value="" disabled selected>Tipe Pembayaran</option>
-                  <option value="Tunai">Tunai</option>
-                  <option value="LinkAja">LinkAja</option>
-                  <option value="BSI">BSI</option>
-                  <option value="Dana">Dana</option>
-                </select>
-
-                <!-- Jenis Transaksi -->
-                <div class="gender-input">
-                  <label for="jenis_transaksi">Jenis Transaksi:</label>
-                  <input
-                    type="radio"
-                    id="jenis_transaksi-pemasukan"
-                    name="jenis_transaksi"
-                    value="Pemasukan"
-                    required
-                  />
-                  Pemasukan
-                  <input
-                    type="radio"
-                    id="jenis_transaksi-pengeluaran"
-                    name="jenis_transaksi"
-                    value="Pengeluaran"
-                    required
-                  />
-                  Pengeluaran
-                </div>
-
-                <!-- Catatan -->
-                <textarea
-                  name="catatan"
-                  id="catatan"
-                  required
-                  placeholder="Catatan"
-                  style="height: 200px"
-                  aria-describedby="Masukan data dengan benar"
-                ></textarea>
-              </div>
+              <!-- Nominal -->
+              <input
+                type="number"
+                name="nominal"
+                id="nominal"
+                required
+                placeholder="Nominal (Rp)"
+                aria-describedby="Masukan data dengan benar"
+              />
+              <div id="display-nominal">Rp. 0,00</div>
             </div>
-            <!-- Lokasi -->
-            <input type="hidden" id="latitude" name="latitude" />
-            <input type="hidden" id="longitude" name="longitude" />
 
-            <button type="submit" class="btn btn-outline-primary">
-              Submit
-            </button>
-            <p
-              style="
-                text-align: center;
-                margin-top: 5px;
-                margin-bottom: 5px;
-                font-size: 14px;
-              "
-            >
-              Ucapkan Basmallah sebelum melakukan submit
-            </p>
-          </form>
-        </div>
+            <div class="center-form-right">
+              <!-- Jenis Keperluan -->
+              <select
+                class="form-select"
+                id="jenis_keperluan"
+                name="jenis_keperluan"
+                required
+              >
+                <option value="" disabled selected>Jenis Keperluan</option>
+                <option value="Pribadi">Pribadi</option>
+                <option value="Organisasi">Organisasi</option>
+                <option value="Sedekah">Sedekah</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+
+              <!-- Tipe Pembayaran -->
+              <select
+                class="form-select"
+                id="tipe_pembayaran"
+                name="tipe_pembayaran"
+                required
+              >
+                <option value="" disabled selected>Tipe Pembayaran</option>
+                <option value="Tunai">Tunai</option>
+                <option value="LinkAja">LinkAja</option>
+                <option value="BSI">BSI</option>
+                <option value="Dana">Dana</option>
+              </select>
+
+              <!-- Jenis Transaksi -->
+              <div class="gender-input">
+                <label for="jenis_transaksi">Jenis Transaksi:</label>
+                <input
+                  type="radio"
+                  id="jenis_transaksi-pemasukan"
+                  name="jenis_transaksi"
+                  value="Pemasukan"
+                  required
+                />
+                Pemasukan
+                <input
+                  type="radio"
+                  id="jenis_transaksi-pengeluaran"
+                  name="jenis_transaksi"
+                  value="Pengeluaran"
+                  required
+                />
+                Pengeluaran
+              </div>
+
+              <!-- Catatan -->
+              <textarea
+                name="catatan"
+                id="catatan"
+                required
+                placeholder="Catatan"
+                style="height: 200px"
+                aria-describedby="Masukan data dengan benar"
+              ></textarea>
+            </div>
+          </div>
+          <!-- Lokasi -->
+          <input type="hidden" id="latitude" name="latitude" />
+          <input type="hidden" id="longitude" name="longitude" />
+
+          <button type="submit" class="btn btn-outline-primary">Submit</button>
+          <p
+            style="
+              text-align: center;
+              margin-top: 5px;
+              margin-bottom: 5px;
+              font-size: 14px;
+            "
+          >
+            Ucapkan Basmallah sebelum melakukan submit
+          </p>
+        </form>
       </div>
     </div>
     <!-- container -->
