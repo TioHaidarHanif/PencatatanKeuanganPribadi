@@ -112,85 +112,82 @@
                         <option value="Lainnya">Lainnya</option>
                       </select>
                     </div>
+                  </div>
 
-                    <!-- Right Column -->
-                    <div class="col-md-6">
-                      <!-- Tipe Pembayaran -->
-                      <div class="mb-3">
-                        <label for="tipe_pembayaran" class="form-label"
-                          >Tipe Pembayaran</label
-                        >
-                        <select
-                          class="form-select"
-                          id="tipe_pembayaran"
-                          name="tipe_pembayaran"
-                          required
-                        >
-                          <option value="" disabled selected>
-                            Select Tipe Pembayaran
-                          </option>
-                          <option value="Tunai">Tunai</option>
-                          <option value="LinkAja">LinkAja</option>
-                          <option value="BSI">BSI</option>
-                          <option value="Dana">Dana</option>
-                        </select>
-                      </div>
-
-                      <!-- Jenis Transaksi -->
-                      <div class="mb-3">
-                        <label for="jenis_transaksi" class="form-label d-block"
-                          >Jenis Transaksi</label
-                        >
-                        <div class="form-check form-check-inline">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            id="jenis_transaksi-pemasukan"
-                            name="jenis_transaksi"
-                            value="Pemasukan"
-                            required
-                          />
-                          <label
-                            class="form-check-label"
-                            for="jenis_transaksi-pemasukan"
-                            >Pemasukan</label
-                          >
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            id="jenis_transaksi-pengeluaran"
-                            name="jenis_transaksi"
-                            value="Pengeluaran"
-                            required
-                          />
-                          <label
-                            class="form-check-label"
-                            for="jenis_transaksi-pengeluaran"
-                            >Pengeluaran</label
-                          >
-                        </div>
-                      </div>
-                      <!-- Nominal -->
-                      <div class="mb-3">
-                        <label for="nominal" class="form-label"
-                          >Nominal (Rp)</label
-                        >
-                        <input
-                          type="number"
-                          name="nominal"
-                          id="nominal"
-                          class="form-control"
-                          placeholder="Enter Nominal"
-                          required
-                        />
-                        <div id="display-nominal" class="form-text">
-                          Rp. 0,00
-                        </div>
-                      </div>
+                  <!-- Right Column -->
+                  <div class="col-md-6">
+                    <!-- Tipe Pembayaran -->
+                    <div class="mb-3">
+                      <label for="tipe_pembayaran" class="form-label"
+                        >Tipe Pembayaran</label
+                      >
+                      <select
+                        class="form-select"
+                        id="tipe_pembayaran"
+                        name="tipe_pembayaran"
+                        required
+                      >
+                        <option value="" disabled selected>
+                          Select Tipe Pembayaran
+                        </option>
+                        <option value="Tunai">Tunai</option>
+                        <option value="LinkAja">LinkAja</option>
+                        <option value="BSI">BSI</option>
+                        <option value="Dana">Dana</option>
+                      </select>
                     </div>
 
+                    <!-- Jenis Transaksi -->
+                    <div class="mb-3">
+                      <label for="jenis_transaksi" class="form-label d-block"
+                        >Jenis Transaksi</label
+                      >
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          id="jenis_transaksi-pemasukan"
+                          name="jenis_transaksi"
+                          value="Pemasukan"
+                          required
+                        />
+                        <label
+                          class="form-check-label"
+                          for="jenis_transaksi-pemasukan"
+                          >Pemasukan</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          id="jenis_transaksi-pengeluaran"
+                          name="jenis_transaksi"
+                          value="Pengeluaran"
+                          required
+                        />
+                        <label
+                          class="form-check-label"
+                          for="jenis_transaksi-pengeluaran"
+                          >Pengeluaran</label
+                        >
+                      </div>
+                    </div>
+                    <!-- Nominal -->
+                    <div class="mb-3">
+                      <label for="nominal" class="form-label"
+                        >Nominal (Rp)</label
+                      >
+                      <input
+                        type="number"
+                        name="nominal"
+                        id="nominal"
+                        class="form-control"
+                        placeholder="Enter Nominal"
+                        required
+                      />
+                      <div id="display-nominal" class="form-text">Rp. 0,00</div>
+                    </div>
                     <!-- Catatan -->
                     <div class="mb-3">
                       <label for="catatan" class="form-label">Catatan</label>
