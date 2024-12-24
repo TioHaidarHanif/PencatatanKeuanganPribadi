@@ -82,6 +82,44 @@
         display: block;
       }
 
+      .premium-dropdown2 {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: calc(100% + 5px); /* Adjust positioning below the button */
+        background-color: #ffffff;
+        border: 1px solid #4caf50;
+        border-radius: 5px;
+        padding: 10px 0;
+        margin: 0;
+        list-style: none;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        z-index: 10;
+        text-align: left;
+      }
+
+      .premium-dropdown2 li {
+        padding: 10px 20px;
+        font-size: 14px;
+        color: #333;
+        cursor: pointer;
+      }
+
+      .premium-dropdown2 li i {
+        margin-right: 10px; /* Font Awesome icon spacing */
+        color: #4caf50;
+      }
+
+      .premium-dropdown2 li:hover {
+        background-color: #4caf50;
+        color: #ffffff;
+      }
+
+      /* Show dropdown on hover */
+      .premium-container:hover .premium-dropdown2 {
+        display: block;
+      }
       .contact-dropdown {
         margin-top: 15px;
         text-align: left;
@@ -147,16 +185,16 @@
           class="w3-button w3-black w3-padding-large w3-large w3-margin-top"
           >Mulai sekarang</a
         >
-        <ul class="premium-dropdown">
+        <ul class="premium-dropdown2">
           <div class="contact-dropdown">
             <a
               href="./pencatatan/index.html"
-              class="w3-button w3-black w3-padding-large w3-large w3-margin-top"
+              class="w3-button w3-black w3-padding-large w3-large"
               >Form 1</a
             >
             <a
               href="./pencatatan/form2.html"
-              class="w3-button w3-black w3-padding-large w3-large w3-margin-top"
+              class="w3-button w3-black w3-padding-large w3-large"
               >Form 2</a
             >
           </div>
