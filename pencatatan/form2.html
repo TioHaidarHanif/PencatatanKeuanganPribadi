@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pencatatan Keuangan Pribadi</title>
+    <link rel="stylesheet" href="./form2.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,206 +15,156 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./form2.css" />
+
     <style>
       .whitespace-pre-line {
         white-space: pre-line;
       }
+
       .bg-paper {
+        /* bacmround with image, and repeat */
+
         transition: width 1s ease 0.5s;
+        /* 0.5s delay before transition starts */
       }
+
       .bg-paper:hover {
         box-shadow: 5px 5px 5px 5px rgba(78, 173, 79, 0.25);
       }
+
       .dark-mode-tambahan {
         background-blend-mode: soft-light;
       }
     </style>
   </head>
-  <body>
-    <div class="container my-5">
-      <section class="form-container">
+
+  <body class="">
+    <div class="container" id="container">
+      <div class="form-container identitas-container">
         <form id="formulir" class="needs-validation" novalidate>
-          <h1 class="text-center mb-4">Submit Data</h1>
-          <div class="row g-4">
-            <!-- Kiri -->
-            <div class="col-md-6">
+          <h1 style="text-align: center">Submit Data</h1>
+          <div class="center-form">
+            <div class="center-form-left">
               <!-- Link Google Spreadsheet -->
-              <div class="mb-3">
-                <label for="link" class="form-label"
-                  >Link Google Spreadsheet</label
-                >
-                <input
-                  type="url"
-                  name="link"
-                  id="link"
-                  class="form-control"
-                  required
-                  placeholder="Masukkan link Google Spreadsheet"
-                  aria-describedby="linkHelp"
-                />
-                <div class="invalid-feedback">Masukkan link yang valid.</div>
-              </div>
+              <input
+                type="url"
+                name="link"
+                id="link"
+                required
+                placeholder="Link Google Spreadsheet"
+                aria-describedby="Masukan data dengan benar"
+              />
 
               <!-- Tanggal Transaksi -->
-              <div class="mb-3">
-                <label for="tanggal_transaksi" class="form-label"
-                  >Tanggal Transaksi</label
-                >
-                <input
-                  type="date"
-                  name="tanggal_transaksi"
-                  id="tanggal_transaksi"
-                  class="form-control"
-                  required
-                />
-                <div class="invalid-feedback">Masukkan tanggal transaksi.</div>
-              </div>
+              <input
+                type="date"
+                name="tanggal_transaksi"
+                id="tanggal_transaksi"
+                required
+                placeholder="Tanggal Transaksi"
+                aria-describedby="Masukan data dengan benar"
+              />
 
               <!-- Keterangan -->
-              <div class="mb-3">
-                <label for="keterangan" class="form-label">Keterangan</label>
-                <textarea
-                  name="keterangan"
-                  id="keterangan"
-                  class="form-control"
-                  rows="5"
-                  required
-                ></textarea>
-                <div class="invalid-feedback">
-                  Masukkan keterangan transaksi.
-                </div>
-              </div>
+              <textarea
+                name="keterangan"
+                id="keterangan"
+                required
+                placeholder="Keterangan"
+                style="height: 200px"
+                aria-describedby="Masukan data dengan benar"
+              ></textarea>
 
               <!-- Nominal -->
-              <div class="mb-3">
-                <label for="nominal" class="form-label">Nominal (Rp)</label>
-                <input
-                  type="number"
-                  name="nominal"
-                  id="nominal"
-                  class="form-control"
-                  required
-                />
-                <div id="display-nominal">Rp. 0,00</div>
-                <div class="invalid-feedback">Masukkan nominal transaksi.</div>
-              </div>
+              <input
+                type="number"
+                name="nominal"
+                id="nominal"
+                required
+                placeholder="Nominal (Rp)"
+                aria-describedby="Masukan data dengan benar"
+              />
+              <div id="display-nominal">Rp. 0,00</div>
             </div>
 
-            <!-- Kanan -->
-            <div class="col-md-6">
+            <div class="center-form-right">
               <!-- Jenis Keperluan -->
-              <div class="mb-3">
-                <label for="jenis_keperluan" class="form-label"
-                  >Jenis Keperluan</label
-                >
-                <select
-                  id="jenis_keperluan"
-                  name="jenis_keperluan"
-                  class="form-select"
-                  required
-                >
-                  <option value="" disabled selected>
-                    Pilih jenis keperluan
-                  </option>
-                  <option value="Pribadi">Pribadi</option>
-                  <option value="Organisasi">Organisasi</option>
-                  <option value="Sedekah">Sedekah</option>
-                  <option value="Lainnya">Lainnya</option>
-                </select>
-                <div class="invalid-feedback">Pilih jenis keperluan.</div>
-              </div>
+              <select
+                class="form-select"
+                id="jenis_keperluan"
+                name="jenis_keperluan"
+                required
+              >
+                <option value="" disabled selected>Jenis Keperluan</option>
+                <option value="Pribadi">Pribadi</option>
+                <option value="Organisasi">Organisasi</option>
+                <option value="Sedekah">Sedekah</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
 
               <!-- Tipe Pembayaran -->
-              <div class="mb-3">
-                <label for="tipe_pembayaran" class="form-label"
-                  >Tipe Pembayaran</label
-                >
-                <select
-                  id="tipe_pembayaran"
-                  name="tipe_pembayaran"
-                  class="form-select"
-                  required
-                >
-                  <option value="" disabled selected>
-                    Pilih tipe pembayaran
-                  </option>
-                  <option value="Tunai">Tunai</option>
-                  <option value="LinkAja">LinkAja</option>
-                  <option value="BSI">BSI</option>
-                  <option value="Dana">Dana</option>
-                </select>
-                <div class="invalid-feedback">Pilih tipe pembayaran.</div>
-              </div>
+              <select
+                class="form-select"
+                id="tipe_pembayaran"
+                name="tipe_pembayaran"
+                required
+              >
+                <option value="" disabled selected>Tipe Pembayaran</option>
+                <option value="Tunai">Tunai</option>
+                <option value="LinkAja">LinkAja</option>
+                <option value="BSI">BSI</option>
+                <option value="Dana">Dana</option>
+              </select>
 
               <!-- Jenis Transaksi -->
-              <div class="mb-3">
-                <label for="jenis_transaksi" class="form-label"
-                  >Jenis Transaksi</label
-                >
-                <div class="form-check">
-                  <input
-                    type="radio"
-                    id="jenis_transaksi-pemasukan"
-                    name="jenis_transaksi"
-                    value="Pemasukan"
-                    class="form-check-input"
-                    required
-                  />
-                  <label
-                    class="form-check-label"
-                    for="jenis_transaksi-pemasukan"
-                    >Pemasukan</label
-                  >
-                </div>
-                <div class="form-check">
-                  <input
-                    type="radio"
-                    id="jenis_transaksi-pengeluaran"
-                    name="jenis_transaksi"
-                    value="Pengeluaran"
-                    class="form-check-input"
-                    required
-                  />
-                  <label
-                    class="form-check-label"
-                    for="jenis_transaksi-pengeluaran"
-                    >Pengeluaran</label
-                  >
-                </div>
-                <div class="invalid-feedback">Pilih jenis transaksi.</div>
+              <div class="gender-input">
+                <label for="jenis_transaksi">Jenis Transaksi:</label>
+                <input
+                  type="radio"
+                  id="jenis_transaksi-pemasukan"
+                  name="jenis_transaksi"
+                  value="Pemasukan"
+                  required
+                />
+                Pemasukan
+                <input
+                  type="radio"
+                  id="jenis_transaksi-pengeluaran"
+                  name="jenis_transaksi"
+                  value="Pengeluaran"
+                  required
+                />
+                Pengeluaran
               </div>
 
               <!-- Catatan -->
-              <div class="mb-3">
-                <label for="catatan" class="form-label">Catatan</label>
-                <textarea
-                  name="catatan"
-                  id="catatan"
-                  class="form-control"
-                  rows="5"
-                  required
-                ></textarea>
-                <div class="invalid-feedback">Masukkan catatan transaksi.</div>
-              </div>
+              <textarea
+                name="catatan"
+                id="catatan"
+                required
+                placeholder="Catatan"
+                style="height: 200px"
+                aria-describedby="Masukan data dengan benar"
+              ></textarea>
             </div>
           </div>
-
-          <!-- Hidden Inputs -->
+          <!-- Lokasi -->
           <input type="hidden" id="latitude" name="latitude" />
           <input type="hidden" id="longitude" name="longitude" />
 
-          <!-- Submit -->
-          <div class="text-center">
-            <button type="submit" class="btn btn-outline-primary">
-              Submit
-            </button>
-            <p class="mt-3 mb-1 text-muted" style="font-size: 14px">
-              Ucapkan Basmallah sebelum melakukan submit
-            </p>
-          </div>
+          <button type="submit" class="btn btn-outline-primary">Submit</button>
+          <p
+            style="
+              text-align: center;
+              margin-top: 5px;
+              margin-bottom: 5px;
+              font-size: 14px;
+            "
+          >
+            Ucapkan Basmallah sebelum melakukan submit
+          </p>
         </form>
-      </section>
+      </div>
     </div>
     <!-- container -->
 
