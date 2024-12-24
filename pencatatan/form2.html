@@ -35,6 +35,93 @@
       .dark-mode-tambahan {
         background-blend-mode: soft-light;
       }
+
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Lato", sans-serif;
+      }
+      .w3-bar,
+      h1,
+      button {
+        font-family: "Montserrat", sans-serif;
+      }
+      .fa-anchor,
+      .fa-coffee {
+        font-size: 200px;
+      }
+
+      /* Styling Dropdown */
+      .premium-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .premium-dropdown {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: calc(100% + 5px); /* Adjust positioning below the button */
+        background-color: #ffffff;
+        border: 1px solid #4caf50;
+        border-radius: 5px;
+        padding: 10px 0;
+        margin: 0;
+        list-style: none;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        z-index: 10;
+        text-align: left;
+      }
+
+      .premium-dropdown li {
+        padding: 10px 20px;
+        font-size: 14px;
+        color: #333;
+        cursor: pointer;
+      }
+
+      .premium-dropdown li i {
+        margin-right: 10px; /* Font Awesome icon spacing */
+        color: #4caf50;
+      }
+
+      .premium-dropdown li:hover {
+        background-color: #4caf50;
+        color: #ffffff;
+      }
+
+      /* Show dropdown on hover */
+      .premium-container:hover .premium-dropdown {
+        display: block;
+      }
+
+      .contact-dropdown {
+        margin-top: 15px;
+        text-align: left;
+      }
+
+      .contact-dropdown a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+        border-top: 1px solid #ddd;
+      }
+
+      .contact-dropdown a:hover {
+        background-color: #4caf50;
+        color: #ffffff;
+      }
+
+      .contact-dropdown a i {
+        margin-right: 10px;
+      }
     </style>
   </head>
 
@@ -356,6 +443,48 @@
 
       function showSuccessSendForm(lastrow) {
         formulir.innerHTML = `
+            <header class="w3-container w3-green w3-center" style="padding: 128px 16px">
+      <h1 class="w3-margin w3-jumbo">Money Care</h1>
+      <p class="w3-xlarge">Nyatet Keuangan ga harus ribet</p>
+      <div
+        class="premium-container"
+        style="position: relative; display: inline-block"
+      >
+        <a
+          href="#"
+          class="w3-button w3-white w3-border w3-padding-large w3-large w3-margin-top upgrade-btn"
+          style="color: #4caf50; border-color: #4caf50"
+        >
+          Upgrade? Hubungi Kami!
+        </a>
+        <ul class="premium-dropdown">
+          <li><i class="fas fa-unlock"></i>Akses data keuangan tanpa batas</li>
+          <li>
+            <i class="fas fa-chart-pie"></i>Statistik dan grafik keuangan
+            lengkap
+          </li>
+          <li>
+            <i class="fas fa-file-excel"></i>Integrasi dengan Google Sheets
+          </li>
+          <li><i class="fas fa-bell"></i>Pengingat otomatis</li>
+          <li><i class="fas fa-ad"></i>Tanpa gangguan iklan</li>
+          <div class="contact-dropdown">
+            <a
+              href="https://wa.me/6281905211340?text=Halo%20Admin%20MoneyCare,%20saya%20ingin%20menanyakan%20tentang%20upgrade%20ke%20versi%20premium."
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp"></i>Hubungi via WhatsApp
+            </a>
+            <a
+              href="https://t.me/NotifikasiKeuangan_bot?start=Halo_Admin_MoneyCare_saya_ingin_menanyakan_tentang_upgrade_ke_versi_premium"
+              target="_blank"
+            >
+              <i class="fab fa-telegram-plane"></i>Hubungi via Telegram
+            </a>
+          </div>
+        </ul>
+      </div>
+    </header>
         <div class="card mb-3 p-sm-3 bg-paper">
                             <div class="card-body">
 
